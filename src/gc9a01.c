@@ -2728,9 +2728,9 @@ mp_obj_t gc9a01_GC9A01_make_new(const mp_obj_type_t *type, size_t n_args, size_t
         self->i2c_buffer = m_malloc(self->buffer_size);
     }
 
-    if ((self->display_height != 240 && (self->display_width != 240 || self->display_width != 135)) && (self->display_height != 320 && self->display_width != 240)) {
-        mp_raise_ValueError(MP_ERROR_TEXT("Unsupported display. Only 240x320, 240x240 and 135x240 are supported"));
-    }
+    // if ((self->display_height != 240 && (self->display_width != 240 || self->display_width != 135)) && (self->display_height != 320 && self->display_width != 240)) {
+    //     mp_raise_ValueError(MP_ERROR_TEXT("Unsupported display. Only 240x320, 240x240 and 135x240 are supported"));
+    // }
 
     if (args[ARG_dc].u_obj == MP_OBJ_NULL) {
         mp_raise_ValueError(MP_ERROR_TEXT("must specify dc pin"));
